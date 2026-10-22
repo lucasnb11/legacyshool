@@ -51,7 +51,7 @@ Abra index.html no navegador. Para testar o fluxo completo, preencha o formulár
 
 Paleta obtida do CSS do site oficial: azul #103948, azul índigo #262853, amarelo #FFD800 e laranja #FEA92D. Botões usam o degradê oficial #FFA82F → #FFDD41. Estrutura, conteúdo e formulário da versão anterior preservados.
 
-Imagem adicional: assets/high-school.webp — original oficial de 1080 × 1350 px, https://legacyschool.com.br/wp-content/uploads/2024/04/HIGH-SCHOOL.webp. Arte escolhida para substituir a foto repetida no card Fundamental II; contém a inscrição High School.
+Imagem do Fundamental II: assets/middle-school.png — arte Middle School fornecida pela unidade.
 
 ## Localização e atendimento durante as obras
 
