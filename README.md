@@ -22,7 +22,7 @@ Referências: https://vercel.com/docs/builds/configure-a-build e https://vercel.
 
 ## Como funciona o formulário
 
-O formulário prepara uma mensagem para o WhatsApp da unidade: +55 (91) 98418-9183. A pessoa precisa revisar e enviar a mensagem no WhatsApp. O envio não confirma uma visita.
+O formulário prepara uma mensagem para o WhatsApp da unidade: +55 (91) 98418-9183. A pessoa precisa revisar e enviar a mensagem no WhatsApp. O envio não confirma o atendimento; a equipe combina o horário pelo WhatsApp.
 
 Esta versão não armazena os dados, não envia e-mails, não cadastra contatos automaticamente no RD Station CRM e não contém pixels de anúncios. O cadastro e o acompanhamento no CRM Basic devem ser feitos pela equipe.
 
@@ -52,3 +52,9 @@ Abra index.html no navegador. Para testar o fluxo completo, preencha o formulár
 Paleta obtida do CSS do site oficial: azul #103948, azul índigo #262853, amarelo #FFD800 e laranja #FEA92D. Botões usam o degradê oficial #FFA82F → #FFDD41. Estrutura, conteúdo e formulário da versão anterior preservados.
 
 Imagem adicional: assets/high-school.webp — original oficial de 1080 × 1350 px, https://legacyschool.com.br/wp-content/uploads/2024/04/HIGH-SCHOOL.webp. Arte escolhida para substituir a foto repetida no card Fundamental II; contém a inscrição High School.
+
+## Localização e atendimento durante as obras
+
+A escola fica na Av. Gentil Bittencourt, 663, Nazaré, Belém — PA. O bairro exibido segue a identificação da localidade informada pela unidade.
+
+Durante as obras, o plantão de pré-matrículas funciona temporariamente na Almirante Wandenkolk, 213, entre Municipalidade e Senador Lemos, em Belém. A página diferencia os dois endereços e oferece um link de mapa para cada um. Quando o atendimento mudar, revise o aviso no topo, a seção de localização, o formulário, a mensagem de WhatsApp e as perguntas frequentes.
