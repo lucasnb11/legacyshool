@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#262853">
+<meta name="description" content="Cadastre-se para conhecer a Legacy School Belém e consultar condições especiais para famílias de igrejas parceiras.">
+<title>Desconto Igreja-Parceira | Legacy School Belém</title>
+<style>
+:root{--navy:#262853;--teal:#103948;--yellow:#ffd800;--orange:#fea92d}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%}body{background:#f3f6f7;color:var(--teal);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+main{max-width:1080px;margin:auto;min-height:100vh;display:grid;grid-template-columns:.92fr 1fr;align-items:center;gap:40px;padding:44px 24px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;font-weight:700;font-size:12px;letter-spacing:.07em}
+.brand img{width:92px;height:80px;object-fit:contain}
+.intro{padding:36px 10px}.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#566c7a}
+h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(36px,4.2vw,55px);font-weight:400;line-height:1.08;letter-spacing:-1.3px;margin:24px 0}
+h1 em{font-style:normal;color:var(--navy)}
+.intro p{font-size:16px;color:#5e6870;max-width:420px}
+.values{margin-top:32px;border-top:1px solid #dbe2e6;padding-top:20px;font-size:13px;display:grid;gap:12px}
+.values span::before{content:"✦";color:#e6a300;margin-right:9px}
+.panel{background:#fff;border-radius:13px;box-shadow:0 18px 60px #1b2a3613;overflow:hidden;border:1px solid #dfe5e9}
+.panel-head{background:var(--navy);color:#fff;padding:28px 30px}.panel-head strong{color:var(--yellow);letter-spacing:.06em;font-size:12px}.panel-head h2{font:normal 29px Georgia,serif;line-height:1.15;margin:9px 0}.panel-head p{font-size:13px;color:#e8e9ef;margin:0}
+form{padding:30px}label{display:block;margin-bottom:7px;font-size:13px;font-weight:700}
+.field{margin-bottom:19px}input[type=text],input[type=tel]{height:48px;border:1px solid #cbd4dc;border-radius:5px;padding:0 13px;width:100%;font:inherit;color:var(--teal)}
+input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #00a4bc;outline-offset:3px}
+input::placeholder{color:#80909a}
+.consent{display:flex;gap:11px;align-items:flex-start;margin:15px 0 20px}.consent input{margin-top:4px;width:18px;height:18px;flex:0 0 18px}.consent label{font-weight:400;font-size:12px;line-height:1.55}.consent strong{color:var(--navy)}
+button{width:100%;border:0;border-radius:5px;color:var(--teal);background:linear-gradient(90deg,var(--orange),var(--yellow));padding:17px 20px;font-weight:800;cursor:pointer;font-size:15px}button:disabled{cursor:wait;opacity:.65}
+.helper{margin-top:17px;color:#677783;font-size:12px}.status{margin-top:12px;font-size:13px;min-height:22px}.status.err{color:#9c302f}
+a{color:var(--navy)}footer{text-align:center;font-size:11px;color:#7a868b;padding:0 15px 25px}
+.honeypot{position:absolute;left:-9999px;opacity:0}
+@media(max-width:760px){main{display:block;min-height:0;padding:22px 15px 30px}.intro{padding:10px 10px 27px}.brand img{width:71px;height:66px}h1{margin:16px 0;font-size:39px}.values{margin-top:18px}.panel-head,form{padding:23px}.panel-head h2{font-size:26px}}
+</style>
+</head>
+<body>
+<main>
+<section class="intro">
+<a class="brand" href="/" aria-label="Legacy School Belém"><img src="/assets/logo.svg" alt="Legacy School"><span>LEGACY SCHOOL<br>UNIDADE BELÉM – CENTRO</span></a>
+<div class="eyebrow" style="margin-top:34px">Matrículas 2027</div>
+<h1><em>Desconto</em><br>Igreja-Parceira</h1>
+<p>Famílias de igrejas parceiras podem conhecer nossa proposta educacional e consultar condições especiais de matrícula.</p>
+<div class="values"><span>Excelência na educação</span><span>Intencionalmente cristã</span><span>Plenamente intercultural</span></div>
+</section>
+<div class="panel">
+<div class="panel-head"><strong>01 · CADASTRO</strong><h2>Vamos nos conhecer?</h2><p>Preencha os dados e continue para a apresentação da Legacy School.</p></div>
+<form id="cadastro">
+<div class="field"><label for="nome">Nome *</label><input id="nome" name="nome" type="text" autocomplete="name" required minlength="2" maxlength="100" placeholder="Seu nome completo"></div>
+<div class="field"><label for="whatsapp">WhatsApp com DDD *</label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" placeholder="(91) 99999-9999"></div>
+<div class="field"><label for="igreja">Sua igreja *</label><input id="igreja" name="igreja" type="text" required minlength="2" maxlength="120" placeholder="Nome da igreja ou congregação"></div>
+<div class="honeypot" aria-hidden="true"><label for="website">Deixe em branco</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+<div class="consent"><input id="consentimento" type="checkbox" required><label for="consentimento">Concordo expressamente com o uso do meu <strong>nome, WhatsApp e igreja informada</strong> para cadastro na ação Igreja-Parceira e contato sobre a Legacy School e suas matrículas. Sei que a informação sobre igreja pode revelar minha religião (dado sensível) e que posso solicitar informações, correção ou exclusão pelo e-mail <a href="mailto:comercial.belemdopara@legacyschool.com.br">comercial.belemdopara@legacyschool.com.br</a>.</label></div>
+<button type="submit" id="continuar">Continuar e conhecer a escola →</button>
+<p class="helper">O benefício e as condições de elegibilidade serão confirmados pela escola. Após o cadastro, você conhecerá a proposta educacional e poderá optar por conversar no WhatsApp.</p>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+</form>
+</div>
+</main>
+<footer>© 2026 Legacy School · Unidade Belém · Matrículas 2027</footer>
+<script>
+(function(){
+const form=document.getElementById('cadastro');
+const button=document.getElementById('continuar');
+const status=document.getElementById('status');
+const query=new URLSearchParams(location.search);
+const phoneInput=document.getElementById('whatsapp');
+phoneInput.addEventListener('input',()=>{
+const v=phoneInput.value.replace(/\D/g,'').replace(/^55(?=\d{10,11}$)/,'').slice(0,11);
+if(v.length>10)phoneInput.value='('+v.slice(0,2)+') '+v.slice(2,7)+'-'+v.slice(7);
+else if(v.length>6)phoneInput.value='('+v.slice(0,2)+') '+v.slice(2,6)+'-'+v.slice(6);
+});
+form.addEventListener('submit',async event=>{
+event.preventDefault();
+if(!form.reportValidity())return;
+const nome=document.getElementById('nome').value.trim();
+const whatsapp=phoneInput.value.replace(/\D/g,'').replace(/^55(?=\d{10,11}$)/,'');
+const igreja=document.getElementById('igreja').value.trim();
+if(!/^[1-9]{2}[2-9]\d{7,8}$/.test(whatsapp)){
+status.textContent='Informe um WhatsApp válido com DDD.';status.className='status err';phoneInput.focus();return;
+}
+if(nome.length<2||igreja.length<2||!document.getElementById('consentimento').checked){
+status.textContent='Verifique os campos e o consentimento.';status.className='status err';return;
+}
+button.disabled=true;status.className='status';status.textContent='Registrando seu cadastro…';
+try{
+const response=await fetch('/api/igreja-parceira',{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({nome,whatsapp,igreja,consentimento:true,website:document.getElementById('website').value,origem:'igreja-parceira',utm_source:(query.get('utm_source')||'igreja').slice(0,80)})
+});
+const data=await response.json().catch(()=>({}));
+if(!response.ok||!data.ok)throw new Error(data.message||'Não foi possível confirmar seu cadastro. Tente novamente.');
+// Nenhuma informação pessoal fica na URL; a landing page contém o botão do WhatsApp.
+location.href='/?origem=igreja-parceira&utm_source=igreja&utm_medium=qr&utm_campaign=desconto_igreja_parceira_2027#inicio';
+}catch(error){
+status.textContent=error.message||'Cadastro indisponível no momento. Tente novamente.';
+status.className='status err';button.disabled=false;
+}
+});
+})();
+</script>
+</body>
+</html>
