@@ -1,19 +1,31 @@
 module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   if (req.method !== 'POST') return res.status(405).json({ok:false});
-  const data = req.body || {};
+  if (!String(req.headers['content-type'] || '').includes('application/json')) {
+    return res.status(415).json({ok:false,message:'Formato inválido.'});
+  }
+  if (Number(req.headers['content-length'] || 0) > 4096) {
+    return res.status(413).json({ok:false,message:'Cadastro muito extenso.'});
+  }
+  if(req.headers.origin) {
+    try {
+      if(new URL(req.headers.origin).host !== req.headers.host) return res.status(403).json({ok:false});
+    } catch { return res.status(403).json({ok:false}); }
+  }
+  const data = req.body && typeof req.body === 'object' && !Array.isArray(req.body) ? req.body : {};
+  if(typeof data.website === 'string' && data.website.trim()) return res.status(200).json({ok:true});
   const name = typeof data.nome === 'string' ? data.nome.trim().slice(0,100) : '';
   const church = typeof data.igreja === 'string' ? data.igreja.trim().slice(0,120) : '';
   let phone = String(data.whatsapp || '').replace(/\D/g,'');
   if (phone.startsWith('55') && phone.length > 11) phone = phone.slice(2);
-  if (name.length < 2 || church.length < 2 || !/^[0-9]{10,11}$/.test(phone) || data.consentimento !== true) {
+  if (name.length < 2 || church.length < 2 || !/^[0-9]{10,11}$/.test(phone) || data.consentimento !== true || data.origem !== 'igreja-parceira') {
     return res.status(400).json({ok:false,message:'Verifique seu cadastro.'});
   }
   if (!process.env.RD_CRM_TOKEN) {
     return res.status(503).json({ok:false,message:'Cadastro temporariamente indisponível.'});
   }
   const contact = {name,phones:[{phone:'55'+phone,type:'work'}],
-    notes:'Campanha Igreja-Parceira 2027; igreja: '+church+'; consentimento expresso em '+new Date().toISOString()};
+    notes:'Campanha Igreja-Parceira 2027; origem QR; igreja: '+church+'; consentimento expresso v1 em '+new Date().toISOString()};
   if(process.env.RD_IGREJA_CUSTOM_FIELD_ID){
     contact.contact_custom_fields=[{custom_field_id:process.env.RD_IGREJA_CUSTOM_FIELD_ID,value:church}];
   }
