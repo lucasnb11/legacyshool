@@ -11,7 +11,7 @@
 
 ## Requisitos para ativação
 - Na Vercel, configurar **RD_CRM_TOKEN** como variável de ambiente da função (credencial da conta RD Station CRM). Nunca inserir o token em arquivos públicos ou compartilhar em mensagens.
-- Criar no RD Station um campo personalizado de **contato** chamado "Sua Igreja". Configure **RD_IGREJA_CUSTOM_FIELD_ID** com o ID do campo; sem ele, a informação fica apenas nas anotações do contato.
+- Confirmar no RD Station CRM dois campos personalizados do tipo texto associados a **contato**: **Sua Igreja** e **Origem do cadastro**. A função tenta identificar ambos pelo nome e pode usar os IDs opcionais `RD_IGREJA_CUSTOM_FIELD_ID` e `RD_ORIGEM_CUSTOM_FIELD_ID`. Sem localizar ambos, o endpoint retorna HTTP 503 e não afirma ter captado o lead.
 - Testar um cadastro com dados de teste autorizados, conferir a criação do contato no CRM, origem da campanha, redirecionamento e botão do WhatsApp.
 - Verificar a política do CRM para contatos duplicados e a recepção de erros de validação.
 - Revisar com a escola o aviso de privacidade, prazo de retenção, canal de exercício de direitos e base legal. A informação sobre igreja pode revelar crença religiosa, dado sensível pela LGPD.
@@ -21,7 +21,7 @@
 - Cadastro: `https://legacy-school-tau.vercel.app/igreja-parceira`
 - Página institucional após cadastro: `https://legacy-school-tau.vercel.app/?origem=igreja-parceira`
 
-**Atenção:** na ausência do token do CRM, o endpoint retorna HTTP 503 e não simula confirmação de cadastro. O site público atual permanece intacto até promover as alterações.
+**Atenção:** na ausência do token do CRM ou dos campos personalizados requeridos, o endpoint retorna HTTP 503 e não simula confirmação de cadastro. O deploy pode estar em `READY` mesmo quando a integração comercial não funciona; confirmar o cadastro dentro do CRM antes de distribuir o QR.
 
 ## Documentação oficial
 - https://developers.rdstation.com/reference/crm-v1-create-contact
